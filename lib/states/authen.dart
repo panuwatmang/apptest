@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ruts/utility/app_constant.dart';
 import 'package:flutter_ruts/widgets/widget_form.dart';
+import 'package:flutter_ruts/widgets/widget_icon_button.dart';
 import 'package:flutter_ruts/widgets/widget_image_assets.dart';
 import 'package:flutter_ruts/widgets/widget_text.dart';
 
@@ -30,8 +31,12 @@ class Authen extends StatelessWidget {
                     ),
                     WidgetForm(
                       hint: 'Password :',
-                      subfixWidget: Icon(Icons.password),
                       obscu: true,
+                      subfixWidget: widgetIconButton(
+                        iconData: Icons.remove_red_eye,
+                        pressFunc: () {},
+                      ),
+                      
                     ),
                   ],
                 ),

@@ -65,7 +65,7 @@ class _AuthenState extends State<Authen> {
       key: keyForm,
       child: Column(
         children: [
-          widgetForm(
+          widgetForm(textEditingController: userController,
             validateFunc: (p0) {
               if (p0!.isEmpty) {
                 return 'enter your username';
@@ -76,7 +76,7 @@ class _AuthenState extends State<Authen> {
             hint: 'Username :',
             subfixWidget: Icon(Icons.person_outline),
           ),
-          Obx(() => widgetForm(
+          Obx(() => widgetForm(textEditingController: passwordController,
                 validateFunc: (p0) {
                   if (p0!.isEmpty) {
                     return 'enter your password';

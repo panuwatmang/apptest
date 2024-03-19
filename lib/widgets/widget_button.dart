@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
-class WidgetButton extends StatelessWidget {
-  const WidgetButton({super.key});
+class widgetButton extends StatelessWidget {
+  const widgetButton({
+    Key? key,
+    required this.text,
+    required this.pressFunc,
+  }) : super(key: key);
+
+  final String text;
+  final Function() pressFunc;
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GFButton(
+      onPressed: pressFunc,
+      text: text,
+    );
   }
 }
